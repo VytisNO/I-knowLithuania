@@ -1,0 +1,235 @@
+/* Reset */
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Bendra išvaizda */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f7f8;
+  color: #333;
+  padding: 20px;
+}
+
+/* Hero sekcija */
+header.hero {
+  background-color: #eaf4ff;
+  background-image: url('lithuania-light.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+header.hero h1 {
+  font-size: 2.8em;
+  color: #0a66c2;
+  margin-bottom: 10px;
+}
+
+header.hero p {
+  font-size: 1.2em;
+  color: #444;
+}
+
+header select {
+  margin-top: 20px;
+  padding: 6px;
+  font-size: 1em;
+}
+
+/* Navigacija */
+nav a {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 1em;
+  color: #0a66c2;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Kortelės */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.06);
+  width: 250px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  display: block;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  background-color: #f0f8ff;
+}
+
+.card h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #0a66c2;
+}
+
+.card p {
+  font-size: 1em;
+  color: #555;
+}
+
+/* Pagrindinis turinys */
+main {
+  max-width: 900px;
+  margin: auto;
+}
+
+main section {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s ease;
+}
+
+main section:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+main section h2 {
+  margin-bottom: 10px;
+  font-size: 1.8em;
+  color: #0a66c2;
+}
+
+/* Filtras */
+#sector-filter {
+  padding: 8px;
+  font-size: 1em;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Kontaktų forma */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+.contact-form button {
+  padding: 10px;
+  background-color: #0a66c2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #084a99;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #888;
+}
+header.hero {
+  background-color: #eaf4ff;
+  background-image: url('lithuania-light.jpg'); /* gali naudoti kitą paveikslėlį */
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+header.hero h1 {
+  font-size: 2.8em;
+  color: #0a66c2;
+  margin-bottom: 10px;
+}
+
+header.hero p {
+  font-size: 1.2em;
+  color: #444;
+}
+.contact-form {
+  background-color: white;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-form h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #0a66c2;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+.contact-form button {
+  padding: 12px;
+  background-color: #0a66c2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #084a99;
+}
+
