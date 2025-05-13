@@ -31,14 +31,46 @@
   <section class="contact-form">
     <h2>Contact Us</h2>
     <p>Have questions or want to leave feedback? Leave your thoughts about us below!</p>
-    <form action="vytis.norvaisas@mok.vgtulicejus.lt" method="post" enctype="text/plain">
+  
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="showThankYou(event)">
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="bot-field" />
+  
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" rows="5" placeholder="Your text..." required></textarea>
-      <textarea name="message" rows="3" placeholder="Leave your thoughts about us..." required></textarea>
+      <textarea name="feedback" rows="3" placeholder="Leave your thoughts about us..." required></textarea>
+  
       <button type="submit">Send Message</button>
     </form>
+  
+    <div id="thank-you" style="display:none; margin-top: 20px; color: green; font-weight: bold;">
+      Thank you for your message! We’ll get back to you soon.
+    </div>
   </section>
+  
+  <script>
+    function showThankYou(event) {
+      event.preventDefault();
+      const form = event.target;
+  
+      // Siunčia duomenis į Netlify
+      const data = new FormData(form);
+      fetch("/", {
+        method: "POST",
+        body: data
+      })
+      .then(() => {
+        form.style.display = "none";
+        document.getElementById("thank-you").style.display = "block";
+      })
+      .catch((error) => {
+        alert("There was an error submitting the form. Please try again.");
+        console.error(error);
+      });
+    }
+  </script>
+  
   
   <footer>
     <p>&copy; 2025 Life in Lithuania. All rights reserved.</p>
