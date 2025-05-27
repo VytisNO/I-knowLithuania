@@ -5,9 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Work in Lithuania</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+
 </head>
 <body>
-  <header class="hero">
+
+  <header class="hero" data-aos="fade-in">
     <div class="overlay">
       <h1>Working in Lithuania</h1>
       <p>Your gateway to career opportunities in the Baltics</p>
@@ -18,21 +22,38 @@
   </header>
 
   <main class="cards">
-    <a class="card" href="EmploymentOpportunities.html">
+    <a class="card" href="EmploymentOpportunities.html" data-aos="fade-up" data-aos-delay="100">
+      <i class="fas fa-briefcase"></i>
       <h2>Employment Opportunities</h2>
       <p>Explore job prospects in various industries in Lithuania.</p>
     </a>
 
-    <a class="card" href="workpermits.html">
+    <a class="card" href="workpermits.html" data-aos="fade-up" data-aos-delay="200">
+      <i class="fas fa-id-card"></i>
       <h2>Work Permits</h2>
       <p>Learn about the application process and requirements.</p>
     </a>
 
-    <a class="card" href="howtofindajob.html">
+    <a class="card" href="howtofindajob.html" data-aos="fade-up" data-aos-delay="300">
+      <i class="fas fa-search"></i>
       <h2>How to Find a Job</h2>
       <p>Tips and platforms to kick-start your job search.</p>
     </a>
   </main>
+
+  <footer>
+    <p>&copy; 2025 Life in Lithuania. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>
 
   <footer>
     <p>&copy; 2025 Life in Lithuania. All rights reserved.</p>
