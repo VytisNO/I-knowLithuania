@@ -5,75 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Life in Lithuania</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <header class="hero">
+ <header class="hero">
+  <div class="overlay">
     <h1>Welcome to Life in Lithuania</h1>
     <p>Discover everything about working, studying, and living in Lithuania.</p>
-  </header>
+  </div>
+</header>
 
-  <main class="cards">
-    <a class="card" href="work.html">
-      <h2>Work</h2>
-      <p>Explore job opportunities and career advice.</p>
-    </a>
+<main class="cards">
+  <a class="card" href="work.html">
+    <i class="fas fa-briefcase" style="font-size: 2.5rem; color: #0a66c2; margin-bottom: 10px;"></i>
+    <h2>Work</h2>
+    <p>Explore job opportunities and career advice.</p>
+  </a>
 
-    <a class="card" href="studies.html">
-      <h2>Studies</h2>
-      <p>Learn about educational options and universities.</p>
-    </a>
+  <a class="card" href="studies.html">
+    <i class="fas fa-graduation-cap" style="font-size: 2.5rem; color: #0a66c2; margin-bottom: 10px;"></i>
+    <h2>Studies</h2>
+    <p>Learn about educational options and universities.</p>
+  </a>
 
-    <a class="card" href="life.html">
-      <h2>Life</h2>
-      <p>Experience everyday life and culture in Lithuania.</p>
-    </a>
-  </main>
-  <section class="contact-form">
-    <h2>Contact Us</h2>
-    <p>Have questions or want to leave feedback? Leave your thoughts about us below!</p>
-  
-    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="showThankYou(event)">
-      <input type="hidden" name="form-name" value="contact" />
-      <input type="hidden" name="bot-field" />
-  
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your text..." required></textarea>
-      <textarea name="feedback" rows="3" placeholder="Leave your thoughts about us..." required></textarea>
-  
-      <button type="submit">Send Message</button>
-    </form>
-  
-    <div id="thank-you" style="display:none; margin-top: 20px; color: green; font-weight: bold;">
-      Thank you for your message! We’ll get back to you soon.
-    </div>
-  </section>
-  
-  <script>
-    function showThankYou(event) {
-      event.preventDefault();
-      const form = event.target;
-  
-      // Siunčia duomenis į Netlify
-      const data = new FormData(form);
-      fetch("/", {
-        method: "POST",
-        body: data
-      })
-      .then(() => {
-        form.style.display = "none";
-        document.getElementById("thank-you").style.display = "block";
-      })
-      .catch((error) => {
-        alert("There was an error submitting the form. Please try again.");
-        console.error(error);
-      });
-    }
-  </script>
-  
-  
-  <footer>
-    <p>&copy; 2025 Life in Lithuania. All rights reserved.</p>
-  </footer>
+ <a class="card" href="life.html">
+  <i class="fas fa-city" style="font-size: 2.5rem; color: #0a66c2; margin-bottom: 10px;"></i>
+  <h2>Life</h2>
+  <p>Experience everyday life and culture in Lithuania.</p>
+</a>
+
+</main>
+
+<section class="contact-form">
+  <h2>Contact Us</h2>
+  <p>Have questions or want to leave feedback? Leave your thoughts about us below!</p>
+
+  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="showThankYou(event)">
+    <input type="hidden" name="form-name" value="contact" />
+    <input type="hidden" name="bot-field" />
+
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" rows="5" placeholder="Your text..." required></textarea>
+    <textarea name="feedback" rows="3" placeholder="Leave your thoughts about us..." required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div id="thank-you" style="display:none; margin-top: 20px; color: green; font-weight: bold;">
+    Thank you for your message! We’ll get back to you soon.
+  </div>
+</section>
+
+<script>
+  function showThankYou(event) {
+    event.preventDefault();
+    const form = event.target;
+
+    const data = new FormData(form);
+    fetch("/", {
+      method: "POST",
+      body: data
+    })
+    .then(() => {
+      form.style.display = "none";
+      document.getElementById("thank-you").style.display = "block";
+    })
+    .catch((error) => {
+      alert("There was an error submitting the form. Please try again.");
+      console.error(error);
+    });
+  }
+</script>
+
+<footer>
+  <p>&copy; 2025 Life in Lithuania. All rights reserved.</p>
+</footer>
 </body>
 </html>
