@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Life in Lithunia</title>
+  <title>Life in Lithuania</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
 </head>
 <body>
-  <header class="hero">
+
+  <header class="hero" data-aos="fade-in">
     <div class="overlay">
       <h1>Life in Lithuania</h1>
       <p>Live and feel as a local</p>
@@ -18,18 +21,21 @@
   </header>
 
   <main class="cards">
-    <a class="card" href="everyday-life.html">
+    <a class="card" href="everyday-life.html" data-aos="fade-up" data-aos-delay="100">
+      <i class="fas fa-house-chimney"></i>
       <h2>Everyday Life</h2>
       <p>Lithuania offers a high quality of life, clean environment, and modern infrastructure. Public services are efficient, and the cost of living is relatively low compared to other European countries.</p>
     </a>
 
-    <a class="card" href="culture-and-leisure.html">
+    <a class="card" href="culture-and-leisure.html" data-aos="fade-up" data-aos-delay="200">
+      <i class="fas fa-theater-masks"></i>
       <h2>Culture and Leisure</h2>
       <p>From historic old towns to vibrant festivals and a lively café culture, Lithuania has something to offer for everyone. Nature lovers will enjoy countless forests, lakes, and parks.</p>
     </a>
 
-    <a class="card" href="public-transport.html">
-      <h2>Public transport</h2>
+    <a class="card" href="public-transport.html" data-aos="fade-up" data-aos-delay="300">
+      <i class="fas fa-bus"></i>
+      <h2>Public Transport</h2>
       <p>Cities are well connected with affordable buses and trolleybuses, and intercity trains and buses are reliable and easy to use for traveling across Lithuania.</p>
     </a>
   </main>
@@ -37,5 +43,13 @@
   <footer>
     <p>&copy; 2025 Life in Lithuania. All rights reserved.</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>
